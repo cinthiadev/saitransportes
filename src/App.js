@@ -3,7 +3,7 @@ import RoutesApp from './routes'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/saitransportes">
       <RoutesApp />
     </BrowserRouter>
   );
