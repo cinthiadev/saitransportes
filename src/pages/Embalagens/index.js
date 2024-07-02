@@ -78,8 +78,12 @@ const Embalagens = () => {
         <div className='content-textos'>
           <h1>Embalagens para mudança</h1>
           <p>Na hora de transportar seus móveis, louças, objetos pessoais e de decoração, perguntamos como embalar? A Sai transportes tem a solução para esta tarefa, todo e qualquer transporte requer embalagens que garantam a preservação do item transportado.</p>
+          
           <br />
+
+
           <p> Uma das embalagens mais importantes para realização de mudanças é a caixa de papelão que acomoda quase tudo, em conjunto com outras embalagens como plástico bolha, papel Kraft, fitas adesivas e etiquetas de identificação com essas embalagens podemos carregar de forma segura, copos, louças, objetos de decoração e até pequenos móveis , portanto para embalar e transportar seus móveis com segurança chame a Sai Transportes.</p>
+       
         </div>
       </section>
       <CardsInfo cardsData={cardsData} />
