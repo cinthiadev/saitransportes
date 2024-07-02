@@ -1,0 +1,257 @@
+footer {
+    height: 100%;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 0 ;
+    width: 100%;
+}
+
+.group-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 100px 0 40px 0;
+    width: 70%;
+}
+
+.group-footer img {
+    margin-bottom: 20px;
+}
+
+.group-footer-infos h3 {
+    font-size: 16px;
+    font-weight: 400;
+    width: 80%;
+    margin-bottom: 20px;
+    line-height: 1.8em;
+}
+
+.group-footer-infos h4 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.icon-footer {
+    font-size: 26px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.icon-footer:hover {
+    color: var(--cor-principal);
+}
+
+.group-footer-infos ul li {
+    list-style: none;
+   margin-bottom: 20px;
+}
+
+.group-footer-infos ul li a{
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.group-footer-infos ul li a:hover {
+    color: var(--cor-principal);
+}
+
+.group-copy-dev {
+    border-top: 1px solid #fff;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.group-copy-dev p {
+    font-size: 14px;
+    color: #fff;
+}
+
+.group-footer-infos p {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.group-info-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: -40px;
+    gap: 40px;
+}
+
+iframe {
+    width: 100%;
+}
+
+@media (max-width: 766px) {
+    footer {
+        padding: 0 20px;
+    }
+
+    .group-footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .group-footer-infos h4 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .icon-footer {
+        margin-bottom: 20px;
+    }
+
+    .group-footer-infos ul li {
+        list-style: none;
+        margin-bottom: 20px;
+    }
+
+    .group-copy-dev {
+        border-top: 1px solid #fff;
+        width: 90%;
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .group-copy-dev p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .group-footer-infos p {
+        text-align: center;
+    }
+
+    .copy p {
+        line-height: 1.8em;
+        font-size: 16px;
+    }
+
+    .group-info-main {
+        display: block;
+        margin-left: 0px;
+        gap: 0px;
+    }
+
+    .group-info-main .group-footer-infos ul {
+        padding-bottom: 20px;
+    }
+
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+    footer {
+        padding: 0 80px;
+    }
+    .group-footer {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .group-footer-infos h4 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .icon-footer {
+        margin-bottom: 20px;
+    }
+
+    .group-footer-infos ul li {
+        list-style: none;
+        margin-bottom: 20px;
+    }
+
+    .group-copy-dev {
+        border-top: 1px solid #fff;
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .group-copy-dev p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .group-footer-infos p {
+        text-align: center;
+    }
+
+    .copy p {
+        line-height: 1.8em;
+        font-size: 16px;
+    }
+
+    .group-info-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 0px;
+        gap: 40px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1367px) {
+    .group-footer-infos h3 {
+        font-size: 14px;
+        width: 80%;
+        line-height: 1.8em;
+    }
+
+    .group-footer{
+        width: 70%;
+    }
+
+    .group-footer-infos h4 {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .icon-footer {
+        font-size: 22px;
+        margin-right: 20px;
+    }
+
+    .group-footer-infos ul li {
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .group-copy-dev{
+        width: 70%;
+    }
+    .group-copy-dev p {
+        font-size: 12px;
+        
+    }
+
+    .group-footer-infos p {
+        font-size: 14px;
+        margin-top: 15px;
+    }
+}
