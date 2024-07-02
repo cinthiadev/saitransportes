@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/saitransportes/static/css/main.638ea9af.css",
-    "main.js": "/saitransportes/static/js/main.29421f70.js",
+    "main.js": "/saitransportes/static/js/main.2b992544.js",
     "static/media/SAITRANSPORTESHOME.mp4": "/saitransportes/static/media/SAITRANSPORTESHOME.0b1cba17f7f6efd127d7.mp4",
     "static/media/bg-contact.png": "/saitransportes/static/media/bg-contact.06dabdfe336e2b7fa735.png",
     "static/media/imageContact.png": "/saitransportes/static/media/imageContact.a30ca53e34e093e173f0.png",
@@ -13,10 +13,10 @@
     "static/media/image3.jpeg": "/saitransportes/static/media/image3.7b5815b2b29781f3d7ec.jpeg",
     "index.html": "/saitransportes/index.html",
     "main.638ea9af.css.map": "/saitransportes/static/css/main.638ea9af.css.map",
-    "main.29421f70.js.map": "/saitransportes/static/js/main.29421f70.js.map"
+    "main.2b992544.js.map": "/saitransportes/static/js/main.2b992544.js.map"
   },
   "entrypoints": [
     "static/css/main.638ea9af.css",
-    "static/js/main.29421f70.js"
+    "static/js/main.2b992544.js"
   ]
 }
