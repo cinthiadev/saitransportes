@@ -1,0 +1,24 @@
+
+.image-preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-preview img {
+    max-width: 60%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#imagem-editar-post {
+    display: none;
+}
+
+.icon-edit{
+    font-size: 32px;
+}
+
+#imagem-editar-post {
+    border: 0;
+    margin: 0;
+}

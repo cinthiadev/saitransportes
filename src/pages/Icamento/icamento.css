@@ -9,3 +9,9 @@
 #textos-ao-lado{
     margin-bottom: 40px;
 }
+
+@media (max-width: 766px) {
+    .content-botao-orcamento{
+margin-top: 40px;
+    }
+}

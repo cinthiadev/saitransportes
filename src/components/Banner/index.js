@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './banner.css';
+import { Link, useLocation } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Banner = ({ title, description, backgroundImage, buttonLabel, buttonLink }) => {
     const bannerStyle = {
         backgroundImage: `url(${backgroundImage})`,
     };
 
+    const location = useLocation();
+
     return (
         <div className="banner" style={bannerStyle}>
             <div className="banner-content">
                 <h1>{title}</h1>
-                <p>{description}</p>
-                <button href={buttonLink} className="botao-orcamento">
-                    {buttonLabel}
-                </button>
             </div>
         </div>
     );

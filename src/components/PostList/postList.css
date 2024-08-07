@@ -1,0 +1,273 @@
+.post-list {
+    margin-top: 80px;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-blog {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-principal);
+}
+
+.title-blog h1 {
+    color: #fff;
+    width: 70%;
+    text-align: left;
+    padding: 20px 0px;
+    margin-bottom: 0;
+}
+
+.intro-list {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.intro-list a {
+    text-decoration: none;
+    color: var(--cor-principal);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-categoria {
+    margin-right: 10px;
+}
+
+.intro-list a:hover {
+
+    font-weight: 700;
+}
+
+.post-list h2 {
+    width: 70%;
+    color: #000;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.post-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.692);
+    padding: 30px 0;
+
+}
+
+.post-content a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.post-content a:hover {
+    color: var(--cor-principal);
+}
+
+.post-title {
+    margin-bottom: 6px;
+    line-height: 1.2em;
+}
+
+.post-intro {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+    width: 80%;
+    color: var(--cor-secundaria);
+}
+
+.post-categoria {
+    font-weight: 500;
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+}
+
+.post-categoria:hover {
+    color: var(--cor-principal);
+}
+
+.post-img {
+    object-fit: cover;
+    height: 200px;
+    width: 40%;
+    order: 2;
+}
+
+.post-content {
+    width: 50%;
+    order: 1;
+}
+
+.post-data {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.post-img img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+@media (max-width: 766px) {
+    .post-list h1 {
+        display: block;
+    }
+
+    .title-blog h1 {
+        color: #fff;
+        width: 90%;
+        text-align: left;
+        padding: 20px 0px;
+        margin-bottom: 0;
+
+    }
+
+    .intro-list {
+        width: 90%;
+    }
+
+    .post-list h2 {
+        color: #000;
+        font-size: 22px;
+    }
+    
+
+    .post-list {
+        margin-top: 110px;
+    }
+
+    .post-title {
+        margin-bottom: 16px;
+        font-size: 22px;
+    }
+
+
+    .post-item {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        border: 0;
+        padding: 0px;
+        flex-wrap: wrap-reverse;
+    }
+
+    .post-categoria {
+        font-weight: 600;
+        padding-bottom: 6px 0;
+    }
+
+    .post-img {
+        object-fit: cover;
+        height: 280px;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .post-content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .post-data {
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+
+    .post-img img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .intro-list {
+        margin-top: -20px;
+    }
+
+    .post-intro {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.2em;
+        width: 100%;
+        color: var(--cor-secundaria);
+    }
+
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+    .post-list {
+        margin-top: 100px;
+    }
+    .post-list h1 {
+        width: 80%;
+    }
+
+    .post-categoria {
+        font-weight: 500;
+        padding-bottom: 4px;
+        font-size: 14px;
+        color: #000;
+        cursor: pointer;
+    }
+
+    .post-title {
+        margin-bottom: 10px;
+        font-size: 22px;
+        line-height: 1em;
+    }
+
+    .post-item {
+        padding: 10px 0;
+        width: 80%;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.692);
+    }
+
+    .post-img {
+        object-fit: cover;
+        height: 150px;
+        width: 40%;
+        order: 2;
+    }
+
+    .intro-list {
+        width: 80%;
+        margin-top: 40px;
+        padding: 0px 0 10px;
+    }
+
+    .post-intro {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.2em;
+        width: 90%;
+        color: var(--cor-secundaria);
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1367px) {
+
+    .post-item {
+        width: 70%;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.692);
+    }
+
+}

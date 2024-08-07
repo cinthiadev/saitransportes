@@ -6,8 +6,15 @@ footer {
     align-items: center;
     flex-direction: column;
     color: white;
-    padding: 0 ;
+    padding: 0;
     width: 100%;
+}
+
+.group-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-left: -90px;
 }
 
 .group-footer {
@@ -25,7 +32,7 @@ footer {
 .group-footer-infos h3 {
     font-size: 16px;
     font-weight: 400;
-    width: 80%;
+    width: 70%;
     margin-bottom: 20px;
     line-height: 1.8em;
 }
@@ -48,13 +55,15 @@ footer {
 
 .group-footer-infos ul li {
     list-style: none;
-   margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.group-footer-infos ul li a{
+.group-footer-infos ul li a {
     text-decoration: none;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     cursor: pointer;
 }
 
@@ -85,12 +94,16 @@ footer {
 .group-info-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-left: -40px;
     gap: 40px;
 }
 
 iframe {
     width: 100%;
+}
+
+.social-midia-footer a{
+    text-decoration: none;
+    color: #fff;
 }
 
 @media (max-width: 766px) {
@@ -101,7 +114,7 @@ iframe {
     .group-footer {
         display: grid;
         grid-template-columns: 1fr;
-        width: 90%;
+        width: 100%;
     }
 
     .group-footer-infos h4 {
@@ -117,6 +130,11 @@ iframe {
     .group-footer-infos ul li {
         list-style: none;
         margin-bottom: 20px;
+    }
+
+    .group-footer-infos ul li a {
+        list-style: none;
+        margin-bottom: 0px;
     }
 
     .group-copy-dev {
@@ -155,12 +173,27 @@ iframe {
         padding-bottom: 20px;
     }
 
+    .group-links {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-left: 0px;
+    }
+    
 }
 
 @media (min-width: 767px) and (max-width: 1024px) {
     footer {
         padding: 0 80px;
     }
+
+    .group-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-left: 0px;
+    }
+    
     .group-footer {
         width: 100%;
         display: grid;
@@ -181,6 +214,12 @@ iframe {
         list-style: none;
         margin-bottom: 20px;
     }
+
+    .group-footer-infos ul li a {
+        list-style: none;
+        margin-bottom: 0px;
+    }
+
 
     .group-copy-dev {
         border-top: 1px solid #fff;
@@ -219,12 +258,12 @@ iframe {
 @media (min-width: 1025px) and (max-width: 1367px) {
     .group-footer-infos h3 {
         font-size: 14px;
-        width: 80%;
+        width: 60%;
         line-height: 1.8em;
     }
 
-    .group-footer{
-        width: 70%;
+    .group-footer {
+        width: 80%;
     }
 
     .group-footer-infos h4 {
@@ -242,12 +281,13 @@ iframe {
         font-size: 14px;
     }
 
-    .group-copy-dev{
-        width: 70%;
+    .group-copy-dev {
+        width: 80%;
     }
+
     .group-copy-dev p {
         font-size: 12px;
-        
+
     }
 
     .group-footer-infos p {

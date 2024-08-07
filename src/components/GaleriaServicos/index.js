@@ -5,6 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import videoPoster from '../../assets/video-poster2.png'; 
+import videoSrc from '../../assets/SAITRANSPORTESHOME.mp4';
 
 const GaleriaServicos = ({ imagens, title }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -24,6 +26,12 @@ const GaleriaServicos = ({ imagens, title }) => {
   return (
     <div className="galeria-container">
       <h1>{title}</h1>
+      <div className="video-container" >
+        <video width="600" controls poster={videoPoster}>
+          <source src={videoSrc} type="video/mp4" />
+          Seu navegador não suporta a tag de vídeo.
+        </video>
+      </div>
       {isMobile ? (
         <Swiper
           spaceBetween={10}

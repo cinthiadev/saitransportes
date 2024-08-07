@@ -1,0 +1,94 @@
+.add-post-button {
+    width: 70%;
+}
+
+.add-post-button .botao-orcamento {
+    background-color: transparent;
+    color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
+    padding: 8px 0;
+}
+
+.group-buttons-edit .delete {
+    background-color: transparent;
+    border: 1px solid red;
+    color: red;
+    padding: 6px 0;
+    font-size: 14px;
+}
+
+.group-buttons-edit .edit {
+    background-color: transparent;
+    color: #333333;
+    border: 1px solid #333333;
+    padding: 6px 0;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+    .group-buttons-edit {
+        display: flex;
+    }
+
+    .add-post-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        text-decoration: none;
+    }
+
+    .button-sair{
+        width: 90%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .add-post-button .botao-orcamento {
+        width: 90%;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .add-post-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .add-post-button .botao-orcamento {
+        width: 80%;
+     
+    }
+    .button-sair{
+        width: 80%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+}
+
+.add-post-button .sair{
+    border: 1px solid #666666;
+    background-color: #666666;
+    color: #fff;
+    font-size: 14px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.icon-sair{
+    font-size: 12px;
+    margin-right: 6px;
+    font-family: 'Open Sans';
+}

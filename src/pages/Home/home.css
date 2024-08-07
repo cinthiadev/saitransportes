@@ -1,4 +1,3 @@
-
 /*SEÇÃO SOBRE */
 
 .sobre-nos {
@@ -9,8 +8,18 @@
     justify-content: center;
 }
 
+
+.cta-contrate a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .info-sobre-nos {
-    width: 60%; 
+    width: 60%;
 }
 
 .sobre-nos h2 {
@@ -23,13 +32,17 @@ video {
     margin-bottom: 30px;
 }
 
-.cta-contrate .botoes-acao{
+.cta-contrate .botoes-acao {
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-.cta-contrate .botoes-acao button{
+.cta-contrate .botoes-acao button {
     width: 100%;
-  }
+
+}
 
 
 /*FIM SEÇÃO SOBRE */
@@ -45,7 +58,7 @@ video {
     background-color: var(--background-claro);
 }
 
-.content-serviços{
+.content-serviços {
     width: 70%;
     padding: 40px 0;
     display: flex;
@@ -72,15 +85,19 @@ video {
 .card-descricao-servico .icon1 {
     background-color: #006494;
 }
+
 .card-descricao-servico .icon2 {
     background-color: #6A51FF;
 }
+
 .card-descricao-servico .icon3 {
     background-color: #D81E5B;
 }
+
 .card-descricao-servico .icon4 {
     background-color: #136F63;
 }
+
 .card-descricao-servico .icon5 {
     background-color: #22223ba8;
 }
@@ -106,6 +123,10 @@ video {
     flex-direction: column;
 }
 
+.info-servicos p {
+    font-size: 14px;
+}
+
 .servicos h1 {
     max-width: 800px;
 }
@@ -118,7 +139,7 @@ video {
 /*FIM SEÇÃO SERVIÇOS */
 
 
-.cta-contrate{
+.cta-contrate {
     width: 100%;
     padding: 40px 0;
     display: flex;
@@ -126,7 +147,7 @@ video {
     align-items: center;
 }
 
-.content-cta{
+.content-cta {
     width: 70%;
     display: flex;
     justify-content: center;
@@ -140,11 +161,11 @@ video {
     margin-top: 20px;
 }
 
-.infos-cta{
+.infos-cta {
     width: 100%;
 }
 
-.content-diferenciais{
+.content-diferenciais {
     width: 70%;
     padding: 40px 0;
     display: flex;
@@ -174,10 +195,10 @@ video {
 }
 
 .card-descricao-diferenciais img {
-    padding: 15px;
-    width: 90px;
-    height: 80px;
-    border-radius: 10px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .diferenciais h5 {
@@ -189,10 +210,10 @@ video {
     font-weight: 600;
 }
 
-.card-descricao-diferenciais{
+.card-descricao-diferenciais {
     border: 1px solid #fff;
     border-radius: 16px;
-    padding: 20px 0;
+    padding: 20px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,13 +237,15 @@ video {
 
 .card-descricao-diferenciais h3 {
     margin-bottom: 10px;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 .card-descricao-diferenciais p {
     line-height: 1.2em;
     color: #fff;
+    font-size: 14px;
 }
 
 
@@ -237,11 +260,12 @@ video {
     color: var(--cor-secundaria);
 }
 
-.perfil{
+.perfil {
     width: 100%;
     display: flex;
     align-items: center;
 }
+
 .cards-depoimentos {
     width: 70%;
     display: grid;
@@ -256,7 +280,7 @@ video {
     border-radius: 10px;
 }
 
-.card-descricao-depoimentos{
+.card-descricao-depoimentos {
     background-color: #fff;
     border-radius: 16px;
     padding: 20px 20px 30px 20px;
@@ -283,63 +307,74 @@ video {
     width: 100%;
 }
 
+@media (max-width: 566px) {
+
+    .cta-contrate .botoes-acao {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
 @media (max-width: 766px) {
     .sobre-nos {
         padding: 40px 20px;
     }
-    
+
     .info-sobre-nos {
-        width: 100%; 
+        width: 100%;
     }
 
-    .content-serviços{
+    .content-serviços {
         width: 90%;
     }
-    
+
     .servicos h1 {
         line-height: 1em;
     }
+
     .lista-servicos {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .card-descricao-servico h2 {
-        font-size: 22px;
+        font-size: 20px;
     }
-    
+
     .servicos h5 {
         display: none;
     }
-    
 
-    .cta-contrate{
+
+    .cta-contrate {
         width: 100%;
         padding: 40px 0;
     }
-    
-    .content-cta{
+
+    .content-cta {
         width: 80%;
         display: block;
         justify-content: center;
         align-items: center;
     }
-    
-    
+
+
     .cta-contrate p {
         width: 100%;
         font-size: 18px;
         margin-bottom: 20px;
     }
-    
-    .infos-cta{
+
+    .infos-cta {
         width: 100%;
         text-align: center;
     }
-    
-    
+
+
     .cards-diferenciais {
         width: 100%;
         display: grid;
@@ -347,38 +382,38 @@ video {
         gap: 20px;
     }
 
-    .content-diferenciais{
+    .content-diferenciais {
         width: 90%;
     }
-    
-    
+
+
     .card-descricao-diferenciais img {
         padding: 10px;
     }
-    
+
     .diferenciais h5 {
         display: none;
     }
 
 
-    
+
     .diferenciais h2 {
         font-size: 28px;
     }
-    
+
     .card-descricao-diferenciais h3 {
         margin-bottom: 10px;
         font-size: 26px;
         font-weight: bold;
     }
-    
+
     .card-descricao-diferenciais p {
         font-weight: 500;
         width: 80%;
         line-height: 1em;
     }
-    
-    
+
+
 
     .cards-depoimentos {
         display: grid;
@@ -398,40 +433,43 @@ video {
 
 }
 
-@media (min-width: 767px) and (max-width: 1024px){
-   
-    .sobre-nos {
-        padding: 40px 0;
-    }
-    
-    .info-sobre-nos {
-        width: 80%; 
-    }
-    
-    .content-serviços{
-        width: 80%;
-    }
-    
-    .servicos h1 {
-        line-height: 1em;
-    }
-      
-    .card-descricao-servico h2 {
-        font-size: 22px;
-    }
-    
-    .lista-servicos {
+@media (min-width: 767px) and (max-width: 1024px) {
+
+
+    .cta-contrate .botoes-acao {
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
-    
+
+
+    .sobre-nos {
+        padding: 40px 0;
+    }
+
+    .info-sobre-nos {
+        width: 80%;
+    }
+
+    .content-serviços {
+        width: 80%;
+    }
+
+    .servicos h1 {
+        line-height: 1em;
+    }
+
+    .card-descricao-servico h2 {
+        font-size: 20px;
+    }
+
     .card-descricao-servico h3 {
         margin-bottom: 4px;
         font-size: 20px;
     }
 
-    .cta-contrate{
+    .cta-contrate {
         width: 100%;
         padding: 40px 0;
         display: flex;
@@ -439,28 +477,23 @@ video {
         align-items: center;
     }
 
-    .infos-cta{
+    .infos-cta {
         width: 100%;
         margin-bottom: 20px;
     }
-    
-    .content-cta{
+
+    .content-cta {
         width: 80%;
         display: block;
         justify-content: center;
         align-items: center;
     }
 
-    
-
     .cards-diferenciais {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 30px;
+        gap: 15px;
     }
-    
-    .content-diferenciais{
+
+    .content-diferenciais {
         width: 80%;
         padding: 40px 0;
         display: flex;
@@ -469,11 +502,11 @@ video {
         align-items: center;
     }
 
-    
+
     .card-descricao-diferenciais img {
         padding: 10px;
     }
-    
+
     .diferenciais h5 {
         display: none;
     }
@@ -481,27 +514,30 @@ video {
     .diferenciais h1 {
         width: 100%;
     }
-    
+
+    .card-descricao-diferenciais {
+        padding: 20px 0px;
+    }
+
     .card-descricao-diferenciais h3 {
         padding: 10px 0;
         font-size: 22px;
         font-weight: bold;
         line-height: 1em;
     }
-    
+
     .card-descricao-diferenciais p {
         width: 80%;
     }
 
-    
     .depoimentos {
         padding: 40px 0;
     }
 
-    .depoimentos h1{
+    .depoimentos h1 {
         width: 80%;
     }
-    
+
     .cards-depoimentos {
         display: grid;
         grid-template-columns: 1fr;
@@ -520,8 +556,8 @@ video {
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1367px){
-    .cta-contrate{
+@media (min-width: 1025px) and (max-width: 1367px) {
+    .cta-contrate {
         width: 100%;
         padding: 40px 0;
         display: flex;
@@ -529,26 +565,31 @@ video {
         align-items: center;
     }
 
-    .infos-cta{
+    .infos-cta {
         width: 100%;
         margin-bottom: 20px;
     }
-    
-    .content-cta{
+
+    .content-cta {
         width: 70%;
         display: block;
         justify-content: center;
         align-items: center;
     }
 
-    
+
     .cards-diferenciais {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 30px;
+        gap: 20px;
     }
-    
+
+    .card-descricao-diferenciais {
+        padding: 20px;
+
+    }
+
     .card-descricao-diferenciais img {
         padding: 10px;
     }
@@ -560,5 +601,5 @@ video {
         margin-top: 10px;
     }
 
-    
+
 }

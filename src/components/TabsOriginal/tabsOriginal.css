@@ -1,0 +1,390 @@
+.container-tabs {
+  background-color: var(--cor-principal);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.container-tabs h1 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.content-title-orcamento {
+  border-bottom: 1px solid #979797;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.content-title-orcamento span {
+  background-color: #253A5C;
+  color: #fff;
+  padding: 4px 10px;
+  margin-right: 10px;
+  font-size: 14px;
+  border-radius: 100%;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-title-orcamento h3 {
+  font-size: 14px;
+}
+
+.tabs-orcamento {
+  display: flex;
+  width: 70%;
+}
+
+.tab-buttons-orcamento {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.tab-content-orcamento {
+  border-radius: 6px;
+  margin: 0 15px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.content-produtcs {
+  padding: 10px;
+}
+
+.custom-item-form {
+  min-width: 500px;
+}
+
+.cart-summary {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.cart-summary ul {
+  padding: 10px;
+}
+
+.cart-summary form {
+  padding: 0 10px;
+
+}
+
+.cart-summary form .submit-button {
+  width: 100%;
+  background-color: #253A5C;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.custom-item-form .submit-button {
+  width: 40%;
+  background-color: #253A5C;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  float: right;
+}
+
+.cart-summary form {
+  padding-bottom: 80px;
+}
+
+.cart-summary form .form-group input {
+  background-color: transparent;
+  margin: 0 0 10px 0;
+  border: 1px solid #979797;
+  border-radius: 4px;
+}
+
+.custom-item-form h4 {
+  margin-bottom: 10px;
+}
+
+.custom-item-form .form-group input {
+  background-color: transparent;
+  margin: 0 0 10px 0;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  padding: 15px 10px;
+}
+
+
+.intro-cart-summary {
+  display: flex;
+  align-items: center;
+}
+
+.cart-summary li {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #979797;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  padding: 4px 8px 4px 4px;
+
+}
+
+.quantity-controls {
+  margin: 10px 0;
+}
+
+
+.cart-summary p {
+  color: #767C7F;
+  font-size: 14px;
+}
+
+.cart-summary li strong {
+  font-size: 12px;
+}
+
+.cart-summary li img {
+  width: 26px;
+  object-fit: cover;
+}
+
+.content-buttons-orcamento {
+  padding: 10px;
+}
+
+.tab-buttons-orcamento button {
+  padding: 15px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #979797;
+  outline: none;
+  margin-bottom: 8px;
+  width: 100%;
+  color: #767C7F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+}
+
+.tab-buttons-orcamento button.active {
+  background-color: var(--cor-principal);
+  color: #fff;
+  border: 0;
+}
+
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  min-width: 500px;
+}
+
+
+.product-card {
+  padding: 10px;
+  border: 1px solid #979797;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card img {
+  width: 60%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.product-card h3 {
+  margin-top: 0px;
+  font-size: 14px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.quantity-controls button {
+  border: 1px solid #979797;
+  width: 100%;
+  padding: 2px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+
+.icon-quantity {
+  font-size: 16px;
+  cursor: pointer;
+  color: #979797;
+}
+
+.quantity-controls span {
+  margin: 0 6px;
+  font-size: 14px;
+  padding: 0 15px;
+  border: 1px solid #979797;
+  border-radius: 4px;
+}
+
+@media (max-width: 766px) {
+
+  .container-tabs h1 {
+    padding: 0 20px;
+  }
+
+  .content-title-orcamento h3 {
+    font-size: 14px;
+    line-height: 1.1em;
+  }
+
+  .tabs-orcamento {
+    width: 90%;
+    display: block;
+  }
+
+  .tab-buttons-orcamento {
+    width: 100%;
+    border-radius: 0;
+    border-top-left-radius: 6px ;
+    border-top-right-radius: 6px;
+  }
+
+  .dropdown-container {
+    position: relative;
+    display: inline-block;
+    padding: 20px 10px 10px 10px;
+  }
+
+  .dropdown-toggle {
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .dropdown-menu {
+    list-style-type: none;
+    margin-top: -8px;  
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .dropdown-menu li:hover {
+    background-color: #f1f1f1;
+  }
+
+  .tab-content-orcamento {
+    margin: 0 ;
+    border-radius: 0;
+  }
+
+  .custom-item-form {
+    min-width: 100px;
+    padding-bottom: 40px;
+  }
+
+  .cart-summary {
+    width: 100%;
+    border-radius: 0;
+    border-bottom-left-radius: 6px ;
+    border-bottom-right-radius: 6px;
+  }
+  .cart-summary form {
+    padding-bottom: 20px;
+  }
+
+  .custom-item-form .submit-button {
+    width: 100%;
+  }
+
+  .custom-item-form .form-group input {
+    padding: 10px 10px;
+  }
+
+  .product-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    min-width: 100px;
+  }
+
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .content-title-orcamento h3 {
+    font-size: 14px;
+    line-height: 1.1em;
+  }
+
+  .tabs-orcamento {
+    width: 80%;
+  }
+
+  .tab-buttons-orcamento {
+    width: 50%;
+  }
+
+  .content-produtcs {
+    padding: 10px;
+  }
+
+  .custom-item-form {
+    min-width: 100px;
+  }
+
+  .cart-summary {
+    width: 80%;
+  }
+
+  .custom-item-form .submit-button {
+    width: 100%;
+  }
+
+
+  .custom-item-form .form-group input {
+    padding: 10px 10px;
+  }
+
+  .product-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    min-width: 100px;
+  }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1367px) {
+  .tabs-orcamento {
+    width: 80%;
+  }
+}

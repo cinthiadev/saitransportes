@@ -7,8 +7,10 @@ const CardsInfo = ({ cardsData }) => {
         <div className="cardsInfo">
             <div className='group-cardsInfo'>
                 {cardsData.map((card, index) => (
-                    <div key={index} className='cardsInfo-descricao'>
-                        <img src={card.icon} alt='icone serviços' />
+                    <div key={index} className='box-cardsInfo-descricao'>
+                        <div className='icone-cards-info'>
+                            <img src={card.icon} alt='icone serviços' />
+                        </div>
                         <h3>{card.title}</h3>
                         <p>{card.description}</p>
                     </div>

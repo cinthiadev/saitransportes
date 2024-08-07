@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
 import './guardaMoveis.css';
 import Header from '../../components/Header';
-import HeaderTop from '../../components/HeaderTop';
 import Banner from '../../components/Banner';
 import CardsInfo from '../../components/CardsInfo';
 import GaleriaServicos from '../../components/GaleriaServicos';
 import Duvidas from '../../components/Duvidas';
 import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
-import bannerBackground from '../../assets/banner-home-sai.jpeg';
+import bannerBackground from '../../assets/5-guardamoveis-header.jpg';
 import icon1 from '../../assets/icon-service1.png';
 import icon2 from '../../assets/icon-service2.png';
 import icon3 from '../../assets/icon-service3.png';
@@ -28,14 +27,14 @@ import foto5 from '../../assets/image5.jpeg';
 import foto6 from '../../assets/image6.jpeg';
 import foto7 from '../../assets/image1.jpg';
 import foto8 from '../../assets/image2.jpeg';
-import iconcard1 from '../../assets/icon-card1.png';
-import iconcard2 from '../../assets/icon-card2.png';
-import iconcard3 from '../../assets/icon-card3.png';
+import iconcard1 from '../../assets/icon-equipe-cards-info.svg';
+import iconcard2 from '../../assets/icon-box-cards-info.svg';
+import iconcard3 from '../../assets/icon-people-cards-info.svg';
 
 
 const GuardaMoveis = () => {
 
-  const imagensGaleria = [foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8];
+  const imagensGaleria = [foto1, foto2, foto3, foto4, foto5, foto6];
   const cardsData = [
     { icon: iconcard1, title: 'Equipe uniformizada', description: 'Profissionais capacitados e uniformizados, para serem identificados na sua residência' },
     { icon: iconcard2, title: 'Embalagem adequada', description: 'Materiais adequados para embalar seus móveis e utensílios' },
@@ -66,7 +65,6 @@ const GuardaMoveis = () => {
 
   return (
     <div className="container">
-      <HeaderTop />
       <Header />
       <Banner
         title="Guarda Móveis"
@@ -84,15 +82,14 @@ const GuardaMoveis = () => {
             Como líderes em transporte e agora em armazenamento, garantimos o mesmo compromisso com qualidade e serviço personalizado que nossos clientes conhecem e confiam.</p>
           <h4>"Minha mudança foi super tranquila e fácil, graças a Sai Transportes! Eles são muito organizados e profissionais, nos orientando em cada etapa pra realizar uma mudança eficiente e rápida” - Maria Tereza</h4>
           <div className='botoes-acao'>
-            <button href="" className="botao-orcamento">
+            <button href="#contato" className="botao-orcamento">
               Comece Hoje
             </button>
           </div>
           <p>Não deixe sua necessidade de armazenamento ser um problema. Entre em contato conosco hoje mesmo para descobrir como podemos facilitar sua vida com nosso serviço de guarda móveis. Solicite um orçamento sem compromisso.</p>
         </div>
       </section>
-      <GaleriaServicos title="Confira nossos espaços" imagens={imagensGaleria} />
-      <Duvidas faqData={faqData} />
+      {/* <Duvidas faqData={faqData} /> */}
       <Contact />
       <Footer />
     </div>

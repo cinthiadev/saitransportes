@@ -1,13 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './duvidas.css';
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 const Duvidas = ({ faqData }) => {
     const [activeIndex, setActiveIndex] = useState(null);
+    const answerRefs = useRef([]);
 
     const toggleAccordion = (index) => {
-        setActiveIndex(index === activeIndex ? null : index);
+        if (index === activeIndex) {
+            setActiveIndex(null); // Fechar o atual
+        } else {
+            setActiveIndex(index); // Abrir o novo
+        }
     };
+
+    useEffect(() => {
+        answerRefs.current.forEach((ref, index) => {
+            if (ref) {
+                if (index === activeIndex) {
+                    ref.style.maxHeight = `${ref.scrollHeight}px`;
+                } else {
+                    ref.style.maxHeight = '0';
+                }
+            }
+        });
+    }, [activeIndex]);
 
     return (
         <div className="faq-accordion">
@@ -19,7 +36,10 @@ const Duvidas = ({ faqData }) => {
                             <h3>{faq.question}</h3>
                             <span className="toggle-icon">{activeIndex === index ? <IoIosArrowDown /> : <IoIosArrowUp />}</span>
                         </div>
-                        <div className={`faq-answer ${activeIndex === index ? 'show' : ''}`}>
+                        <div
+                            ref={(el) => (answerRefs.current[index] = el)}
+                            className={`faq-answer ${activeIndex === index ? 'show' : ''}`}
+                        >
                             <p>{faq.answer}</p>
                         </div>
                     </div>

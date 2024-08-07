@@ -1,112 +1,121 @@
-import './header.css';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import './header.css';
+import { FaBars, FaTimes, FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 import logoHeader from "../../assets/logo-menu-sai-transportes.png";
-import { FaInstagram, FaFacebook } from "react-icons/fa6";
 import { Link as ScrollLink } from 'react-scroll';
 
-function Header() {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [headerFixed, setHeaderFixed] = useState(false);
+const Navbar = () => {
+    const [showMenu, setShowMenu] = useState(false);
     const location = useLocation();
 
     const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+        setShowMenu(!showMenu);
     };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 60) {
-                setHeaderFixed(true);
-            } else {
-                setHeaderFixed(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
     const closeMenu = () => {
-        setMenuOpen(false);
-        window.scrollTo(0, 0); // Adicionado para rolar até o topo
+        setShowMenu(false);
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0
+        });
     };
 
     return (
-        <div className="content">
-            <header className={`${headerFixed ? 'header-fixed header-white-bg' : ''}`}>
-                <Link className='logoHeader' to="/"> <img src={logoHeader} alt='logo header' /> </Link>
-
-                <div className={`menu-toggle ${menuOpen ? 'menu-open' : ''}`} onClick={toggleMenu}>
-                    {!menuOpen ? (
-                        <div className='menu-bar'>
-                            <div className="bar"></div>
-                            <div className="bar"></div>
-                            <div className="bar"></div>
-                        </div>
-                    ) : (
-                        <div className="close-icon">x</div>
-                    )}
+        <div className='container-header'>
+            <div className='header-top'>
+                <h2>Mudanças nacionais em São Paulo na Zona Sul</h2>
+                <div className='button'>
+                    <button className='button-whats'> <a href='https://wa.me/5511947312874' target='_blank'> <FaWhatsapp className='icon-whats' /> (11) 94731-2874 </a></button>
                 </div>
+            </div>
+            <nav className="navbar">
+                <Link className='logo' to="/" onClick={() => { scrollToTop(); }}>
+                    <img src={logoHeader} alt='logo header' />
+                </Link>
 
-                <nav className={`navbar ${menuOpen ? 'open' : ''}`}>
+                <div className={`links ${showMenu ? 'active' : ''}`}>
                     <Link
                         to="/"
                         className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
-                        onClick={closeMenu}
-                    >A Empresa</Link>
+                        onClick={() => { closeMenu(); scrollToTop(); }}
+                    >
+                        A Empresa
+                    </Link>
                     <Link
                         to="/mudancas-residenciais"
                         className={`nav-link ${location.pathname === '/mudancas-residenciais' ? 'active' : ''}`}
-                        onClick={closeMenu}
-                    >Mudanças Residenciais</Link>
+                        onClick={() => { closeMenu(); scrollToTop(); }}
+                    >
+                        Mudanças Residenciais
+                    </Link>
                     <Link
                         to="/mudancas-comerciais"
                         className={`nav-link ${location.pathname === '/mudancas-comerciais' ? 'active' : ''}`}
-                        onClick={closeMenu}
-                    >Mudanças Comerciais</Link>
+                        onClick={() => { closeMenu(); scrollToTop(); }}
+                    >
+                        Mudanças Comerciais
+                    </Link>
                     <Link
                         to="/icamento"
                         className={`nav-link ${location.pathname === '/icamento' ? 'active' : ''}`}
-                        onClick={closeMenu}
-                    >Içamento</Link>
+                        onClick={() => { closeMenu(); scrollToTop(); }}
+                    >
+                        Içamento
+                    </Link>
                     <Link
                         to="/embalagens"
                         className={`nav-link ${location.pathname === '/embalagens' ? 'active' : ''}`}
-                        onClick={closeMenu}
-                    >Embalagens</Link>
+                        onClick={() => { closeMenu(); scrollToTop(); }}
+                    >
+                        Embalagens
+                    </Link>
                     <Link
                         to="/guarda-moveis"
                         className={`nav-link ${location.pathname === '/guarda-moveis' ? 'active' : ''}`}
-                        onClick={closeMenu}
-                    >Guarda-Móveis</Link>
+                        onClick={() => { closeMenu(); scrollToTop(); }}
+                    >
+                        Guarda-Móveis
+                    </Link>
                     <Link
                         to="/blog"
                         className={`nav-link ${location.pathname === '/blog' ? 'active' : ''}`}
-                        onClick={closeMenu}
-                    >Blog</Link>
+                        onClick={() => { closeMenu(); scrollToTop(); }}
+                    >
+                        Blog
+                    </Link>
                     <ScrollLink
                         to="contato"
                         spy={true}
                         smooth={true}
-                        offset={-60}
-                        duration={500}
-                        className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+                        offset={-120}
+                        duration={1200}
+                        className={`contato-header nav-link ${location.pathname === '/' ? 'active' : ''}`}
                         activeClass="active-scroll"
                         onClick={closeMenu}
-                    >Contato</ScrollLink>
-                </nav>
+                    >
+                        Contato
+                    </ScrollLink>
+                </div>
+
+                <div className="menu-toggle" onClick={toggleMenu}>
+                    {showMenu ? <FaTimes /> : <FaBars />}
+                </div>
+                {showMenu && <div className="menu-overlay" onClick={toggleMenu}></div>}
 
                 <div className='social-media'>
-                    <a className='icon-social-media' href='' target='_blank'><FaInstagram size={24} /></a>
-                    <a className='icon-social-media' href='' target='_blank'><FaFacebook size={24} /></a>
+                    <a className='icon-social-media' href='https://www.instagram.com/saitransportes/' target='_blank' rel="noopener noreferrer">
+                        <FaInstagram size={24} />
+                    </a>
+                    <a className='icon-social-media' href='https://www.facebook.com/saitransportes/' target='_blank' rel="noopener noreferrer">
+                        <FaFacebook size={24} />
+                    </a>
                 </div>
-            </header>
+            </nav>
         </div>
     );
-}
+};
 
-export default Header;
+export default Navbar;

@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import './home.css';
 import Header from '../../components/Header';
-import HeaderTop from '../../components/HeaderTop';
-import Banner from '../../components/Banner';
-import GaleriaServicos from '../../components/GaleriaServicos';
+import Banner from '../../components/BannerHome';
+import GaleriaServicos from '../../components/GaleriaServicosHome';
 import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
 import bannerBackground from '../../assets/banner-home-sai.jpeg';
@@ -12,9 +11,9 @@ import icon2 from '../../assets/icon-service2.png';
 import icon3 from '../../assets/icon-service3.png';
 import icon4 from '../../assets/icon-service4.png';
 import icon5 from '../../assets/icon-service5.png';
-import iconDiferenciais1 from '../../assets/iconDiferenciais1.png';
-import iconDiferenciais2 from '../../assets/iconDiferenciais2.png';
-import iconDiferenciais3 from '../../assets/iconDiferenciais3.png';
+import iconDiferenciais1 from '../../assets/icone-box.svg';
+import iconDiferenciais2 from '../../assets/icone-delivery.svg';
+import iconDiferenciais3 from '../../assets/icone -building.svg';
 import depo1 from '../../assets/depo1.png';
 import depo2 from '../../assets/depo2.png';
 import depo3 from '../../assets/depo3.png';
@@ -26,20 +25,24 @@ import foto5 from '../../assets/image5.jpeg';
 import foto6 from '../../assets/image6.jpeg';
 import foto7 from '../../assets/image1.jpg';
 import foto8 from '../../assets/image2.jpeg';
+import videoSrc from '../../assets/video-home.mp4';
+import videoPoster from '../../assets/video-poster.png'; 
 import { FaWhatsapp } from "react-icons/fa";
+import { Link, useLocation } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Home = () => {
 
-  const imagensGaleria = [foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8];
+  const imagensGaleria = [foto1, foto2, foto3, foto4, foto5, foto6];
+  const location = useLocation();
 
   return (
     <div className="container">
-      <HeaderTop />
       <Header />
       <Banner
         title={
           <>
-            Mudança rápida <br />  e fácil é com a gente!
+            Mudança rápida <br /> e fácil é com a gente!
           </>
         }
         backgroundImage={bannerBackground}
@@ -50,13 +53,13 @@ const Home = () => {
       <section className='sobre-nos'>
         <div className='info-sobre-nos'>
           <div className="video-container">
-            <video width="600" controls>
-              <source src={require('../../assets/SAITRANSPORTESHOME.mp4')} type="video/mp4" />
+            <video width="600" controls poster={videoPoster}>
+              <source src={videoSrc}  type="video/mp4" />
               Seu navegador não suporta a tag de vídeo.
             </video>
           </div>
-          <p><strong>Sai Transportes e Mudanças </strong>teve seu começo em 2005, a princípio oferecendo serviços de transportes rápidos com motocicletas. <br />
-            A partir daí, nos adequamos para oferecer soluções de transporte que atendessem cada vez mais a necessidade dos nossos clientes. Começamos a oferecer serviços excepcionais de mudanças residenciais e comerciais, içamentos, e agora, guarda móveis. Nosso compromisso nunca mudou, proporcionar serviços para facilitar sua vida com qualidade, segurança, e garantir uma experiencia única. <br />
+          <p><strong>Sai Transportes e Mudanças</strong> teve seu começo em 2005, a princípio oferecendo serviços de transportes rápidos com motocicletas. <br />
+            A partir daí, nos adequamos para oferecer soluções de transporte que atendessem cada vez mais a necessidade dos nossos clientes. Começamos a oferecer serviços excepcionais de mudanças residenciais e comerciais, içamentos, e agora, guarda móveis. Nosso compromisso nunca mudou, proporcionar serviços para facilitar sua vida com qualidade, segurança, e garantir uma experiência única. <br />
             Diante de um mercado acirrado e competitivo, é fundamental oferecer e proporcionar serviços de alta qualidade, se adequando a necessidade de cada cliente.</p>
           <h2>Nosso Compromisso</h2>
           <p>Atender as expectativas de todos nossos clientes, a fim de garantir uma alta qualidade em nossos serviços, valorizando todo quadro de funcionários e tomadores de serviços.</p>
@@ -116,36 +119,52 @@ const Home = () => {
             <p>Temos uma equipe qualificada e frota própria para realizar sua mudança com segurança e agilidade.</p>
           </div>
           <div className='botoes-acao'>
-            <button className='botao-orcamento'>Solicitar um orçamento</button>
-            <button className='botao-whats'> <FaWhatsapp className='icon-whats' /> (11) 94731-2874</button>
+            <ScrollLink
+              to="contato"
+              spy={true}
+              smooth={true}
+              offset={-120}
+              duration={1200}
+              className={`contato-header nav-link ${location.pathname === '/' ? 'active' : ''}`}
+              activeClass="active-scroll"
+            >
+              <button className='botao-orcamento'>Solicitar um orçamento</button>
+            </ScrollLink>
+            <button className='botao-whats'><a href='https://wa.me/5511947312874' target='_blank'> <FaWhatsapp className='icon-whats' /> (11) 94731-2874 </a></button>
           </div>
         </div>
       </section>
-
 
       <section className='diferenciais'>
         <div className='content-diferenciais'>
-        <h5>SOBRE OS NOSSOS SERVIÇOS</h5>
-        <h1>Diferenciais que proporcionamos</h1>
-        <div className='cards-diferenciais'>
-          <div className='card-descricao-diferenciais'>
-            <img src={iconDiferenciais1} alt='icone serviços' />
-            <h3>Deixa com a gente!</h3>
-            <p>Embalagens para transportar seus pertences com segurança</p>
+          <h5>SOBRE OS NOSSOS SERVIÇOS</h5>
+          <h1>Diferenciais que proporcionamos</h1>
+          <div className='cards-diferenciais'>
+            <div className='card-descricao-diferenciais'>
+              <div className='icon-diferenciais'>
+                <img src={iconDiferenciais1} alt='icone serviços' />
+              </div>
+              <h3>Deixa com a gente!</h3>
+              <p>Embalagens para transportar seus pertences com segurança</p>
+            </div>
+            <div className='card-descricao-diferenciais'>
+              <div className='icon-diferenciais'>
+                <img src={iconDiferenciais2} alt='icone serviços' />
+              </div>
+              <h3>No seu tempo</h3>
+              <p>Horários alternativos para planejar conforme sua agenda</p>
+            </div>
+            <div className='card-descricao-diferenciais'>
+              <div className='icon-diferenciais'>
+                <img src={iconDiferenciais3} alt='icone serviços' />
+              </div>
+              <h3>Cuidado é essencial</h3>
+              <p>Responsabilidade certificada para transportes e içamentos</p>
+            </div>
           </div>
-          <div className='card-descricao-diferenciais'>
-            <img src={iconDiferenciais2} alt='icone serviços' />
-            <h3>No seu tempo</h3>
-            <p>Horários alternativos para planejar conforme sua agenda</p>
-          </div>
-          <div className='card-descricao-diferenciais'>
-            <img src={iconDiferenciais3} alt='icone serviços' />
-            <h3>Cuidado é essencial</h3>
-            <p>Responsabilidade certificada para transportes e içamentos</p>
-          </div>
-        </div>
         </div>
       </section>
+
       <GaleriaServicos title="Conheça o nosso trabalho" imagens={imagensGaleria} />
 
       <section className='depoimentos'>
@@ -156,27 +175,26 @@ const Home = () => {
               <img src={depo1} alt='image perfil' />
               <h3>Priscilla Darin</h3>
             </div>
-            <p>“Super indico.  Desde o atendimento inicial, orçamento, até a realização da mudança, transporte e cuidado com os móveis, serviço impecável. Ótimo trabalho , recomendo.”</p>
+            <p>"Sai Transportes é simplesmente maravilhoso! Profissionais altamente competentes e serviços de alta qualidade. Não tenho palavras para agradecer pelo excelente trabalho realizado durante a nossa mudança."</p>
           </div>
           <div className='card-descricao-depoimentos'>
             <div className='perfil'>
               <img src={depo2} alt='image perfil' />
-              <h3>Gabriel Coqueiro</h3>
+              <h3>Lucas Silva</h3>
             </div>
-            <p>“Melhor empresa de mudança que já vi! Preço justo, atendimento personalizado, pessoal que realiza a mudança são extremamente legais, prestativos e proativos! Mudança nunca é fácil, mas fazer com a sai faz com que seja MUITO menos difícil!”</p>
+            <p>"Recomendo a todos! Serviço excelente, pontualidade e preço justo. Fizeram um ótimo trabalho na nossa mudança residencial. O içamento foi realizado de forma segura e eficiente. Obrigado, Sai Transportes!"</p>
           </div>
           <div className='card-descricao-depoimentos'>
             <div className='perfil'>
               <img src={depo3} alt='image perfil' />
-              <h3>Ricky Watari</h3>
+              <h3>Ana Paula Oliveira</h3>
             </div>
-            <p>“Equipe educada e muito atenciosa desde o atendimento pra orçamento e agendamento. Trabalho e empacotamento bem rápido e de ótima qualidade, com muito cuidado. Não houve nenhuma avaria de objetos ou móveis. Recomendadíssimo.”</p>
+            <p>"Excelente serviço de guarda-móveis. Meu mobiliário ficou bem armazenado e protegido durante todo o período. Atendimento de qualidade e profissionais muito atenciosos. Com certeza, voltarei a utilizar os serviços da Sai Transportes."</p>
           </div>
         </div>
       </section>
-      
 
-<Contact />
+      <Contact />
       <Footer />
     </div>
   );
